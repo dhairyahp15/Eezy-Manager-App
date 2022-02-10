@@ -1,5 +1,4 @@
 # Ezy - Personal Manager
----
 
 ### Description
 ---
