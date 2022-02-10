@@ -19,12 +19,16 @@ Ezy’s mission will be successful if every user is able to take advantage of ou
 1. Calendar
  - Creating events (one time, recurring. etc.)
 
-2. To-do list + note taking
- - To-do list: auto save items; integration with the calendar
+2. To-do list
+ - Auto save items
+ - Integration with the calendar
 
-3. Password manager
+3. Note taking
+ - Auto save
+
+4. Password manager
  - Password protected
  - Search to find specific account
 
-4. Financing & Budgeting
+5. Financing & Budgeting
  - Input daily/weekly/monthly/annual spending goals
