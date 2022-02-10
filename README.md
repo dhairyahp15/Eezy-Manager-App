@@ -20,6 +20,7 @@ Ezy’s mission will be successful if every user is able to take advantage of ou
  - Creating events (one time, recurring. etc.)
 
 2. To-do list + note taking
+ - To-do list: auto save items; integration with the calendar
 
 3. Password manager
  - Password protected
