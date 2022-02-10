@@ -1,6 +1,6 @@
 # Eezy - Personal Manager
 
-_Eezy manage, eezy life_
+_Eezy manage, Eezy life_
 
 ### Our Vision Statement
 ---
