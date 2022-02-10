@@ -1,7 +1,8 @@
 # Ezy - Personal Manager
 ---
-### Description
 
+### Description
+---
 Ezy is a personal organiser that helps the user stay organised and in control throughout the day. It is intended to make the user's life simpler, as the name implies. Using a calendar to track single, essential events such as medical visits and exams as well as long-term, recurring events such as school and work schedules, anniversaries, and so on. A basic to-do list to write down small activities, lengthier lists such as groceries and reminders to keep your calendar clutter-free and allow you to focus more on each day as it arrives! Using Ezy to manage your time is simple and puts you in charge.
 
 While time management is extremely important to Ezy, there are many other aspects of everyday life that everyone needs to stay on top of. A strong and secure password manager is available for users to better organize and secure their many online and personal accounts, providing strong and safe encryption to every item added to the manager.
@@ -13,9 +14,9 @@ The application will mainly be targeted to students and anyone who works with a 
 For many who rely on their smartphones as their daily planner, it is very important to be able to have every useful tool within reach at all times. Ezy aims to bring all the different time, personal, and life management tools into one, clean interface that will allow the user to always feel like they are in full control.
 
 Ezy’s mission will be successful if every user is able to take advantage of our tools to become more organized and productive after spending time with our app and providing us a strong rating.
----
-### Main features
 
+### Main features
+---
 1. Calendar
  - Creating events (one time, recurring. etc.)
 
