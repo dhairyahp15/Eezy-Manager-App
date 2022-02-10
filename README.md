@@ -2,7 +2,7 @@
 
 ### Description
 ---
-Ezy is a personal organiser that helps the user stay organised and in control throughout the day. It is intended to make the user's life simpler, as the name implies. Using a calendar to track single, essential events such as medical visits and exams as well as long-term, recurring events such as school and work schedules, anniversaries, and so on. A basic to-do list to write down small activities, lengthier lists such as groceries and reminders to keep your calendar clutter-free and allow you to focus more on each day as it arrives! Using Ezy to manage your time is simple and puts you in charge.
+Ezy is a personal organiser that helps the user stay organised and in control throughout the day. It is intended to make the user's life simpler, as the name implies. Using a calendar to track single, essential events such as medical visits and exams, as well as long-term, recurring events such as school and work schedules, anniversaries, and so on. A basic to-do list to write down small activities, lengthier lists such as groceries and reminders to keep calendar clutter-free, allows the user to focus more on each day as it arrives! Using Ezy to manage time is simple and puts the user in charge.
 
 While time management is extremely important to Ezy, there are many other aspects of everyday life that everyone needs to stay on top of. A strong and secure password manager is available for users to better organize and secure their many online and personal accounts, providing strong and safe encryption to every item added to the manager.
 
