@@ -1,0 +1,3 @@
+# Ezy
+
+Personal management app
