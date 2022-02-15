@@ -14,5 +14,4 @@ The application will mainly be targeted to students and anyone who works with a 
 
 For many who rely on their smartphones as their daily planner, it is very important to be able to have every useful tool within reach at all times. Eezy aims to bring all the different time, personal, and life management tools into one, clean interface that will allow the user to always feel like they are in full control.
 
-Eezy’s mission will be successful if every user is able to take advantage of our tools to become more organized and productive after spending time with our app and providing us with feedback that will enable us to better improve user experience.
-
+Eezy’s mission will be successful if every user is able to take advantage of our tools to become more organized and productive after spending time with our app and providing us with feedback that will enable us to better improve user experience. There will be in-app surveys as well as a way for users to see their completed tasks and a productivity value for any given day,
