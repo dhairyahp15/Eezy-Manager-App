@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/night"
+    tools:context=".MainActivity">
+
+    <Space
+        android:id="@+id/space1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/calTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calTitle"
+        android:textAlignment="center"
+        android:textColor="@color/teal1"
+        android:textSize="42sp"
+        android:textStyle="bold|italic" />
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="match_parent"
+        android:layout_height="80sp" />
+
+    <CalendarView
+        android:id="@+id/calView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/CalNight"
+        android:dateTextAppearance="@style/CalNightText"
+        android:weekDayTextAppearance="@style/CalNightWeekText" />
+
+</LinearLayout>
