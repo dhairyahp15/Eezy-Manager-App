@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
-    tools:context=".MainActivity">
-
-    <Space
-        android:id="@+id/space1"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
+    tools:context=".MainActivity"
+    android:id="@+id/layout">
 
     <TextView
         android:id="@+id/calTitle"
@@ -21,19 +15,50 @@
         android:textAlignment="center"
         android:textColor="@color/teal3"
         android:textSize="42sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074" />
 
-    <Space
-        android:id="@+id/space2"
-        android:layout_width="match_parent"
-        android:layout_height="80sp" />
+    <Button
+        android:id="@+id/buttonCalender"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="208dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#787878"
+        android:text="Go to Calendar"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.169" />
 
-    <CalendarView
-        android:id="@+id/calView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/CalLight"
-        android:dateTextAppearance="@style/CalLightText"
-        android:weekDayTextAppearance="@style/CalLightWeekText" />
+    <Switch
+        android:id="@+id/darkSwitch"
+        android:layout_width="139dp"
+        android:layout_height="24dp"
+        android:text="Dark Mode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:rotation="25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/ic_android_black_24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
