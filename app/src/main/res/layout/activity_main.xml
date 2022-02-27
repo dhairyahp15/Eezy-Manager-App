@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.074" />
 
     <Button
-        android:id="@+id/buttonCalender"
+        android:id="@+id/buttonCalendar"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="208dp"
         android:layout_height="57dp"

@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/night"
-    tools:context=".MainActivity">
-
-    <Space
-        android:id="@+id/space1"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/calTitle"
@@ -19,21 +12,22 @@
         android:layout_height="wrap_content"
         android:text="@string/calTitle"
         android:textAlignment="center"
-        android:textColor="@color/teal1"
+        android:textColor="@color/teal3"
         android:textSize="42sp"
-        android:textStyle="bold|italic" />
-
-    <Space
-        android:id="@+id/space2"
-        android:layout_width="match_parent"
-        android:layout_height="80sp" />
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074" />
 
     <CalendarView
-        android:id="@+id/calView"
+        android:id="@+id/calendar_view2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/CalNight"
         android:dateTextAppearance="@style/CalNightText"
-        android:weekDayTextAppearance="@style/CalNightWeekText" />
+        android:weekDayTextAppearance="@style/CalNightWeekText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
