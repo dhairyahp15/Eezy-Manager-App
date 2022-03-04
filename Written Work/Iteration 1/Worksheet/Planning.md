@@ -1,3 +1,0 @@
-## Agile Planning
-
-For this iteration, we had 2 big features and a single user story that we wanted to implement. As time went on, we realized one of our features might have been too big of a project to tackle in the first real iteration of our project. It took time, but our team decided it would be best to move on and work on another feature inplace of it. That feature was then pushed to Iteration 2 along with many other User Stories that we had estimated we could complete. Most features and User Stories from the beginning had good vision so there was no need for us to go back and edit any of the issues we had already created. Although, we did have to add some issues to our repo as we had an idea that was not part of the original ideation stage.
