@@ -1,6 +1,4 @@
-# Contributing
-
-## Branching Strategy
+# Branching Strategy
 - ```main```: This is our production branch. At the end of each iteration a pull request should be made to `main` from `dev` branch. Only the `dev` branch will be made off of here.
 - ```dev```: This our "working" branch. All work in progress being made towards each iteration will be done here.
 - *```feature```* : All feature branches will be checked out from `dev`, and merged back once the feature is finished.
@@ -22,3 +20,6 @@ Before any PR you should merge  `dev`  into your feature branch. If there are me
 ### 4 Approvals
 
 -   If the PR is being made to  `main`, it should be reviewed and approved by at least 5 team members before merging.
+
+### Snapshot
+![Visual of our branching strategy](Sketch.png)
