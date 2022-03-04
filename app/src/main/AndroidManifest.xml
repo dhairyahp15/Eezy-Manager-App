@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calendar">
         <activity
+            android:name=".signup_page"
+            android:exported="false" />
+        <activity
             android:name=".MainNightActivity"
             android:exported="false" />
         <activity
@@ -21,8 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalendarLight"></activity>
-        <activity android:name=".CalendarDark"></activity>
+        <activity android:name=".CalendarLight" />
+        <activity android:name=".CalendarDark" />
     </application>
 
 </manifest>

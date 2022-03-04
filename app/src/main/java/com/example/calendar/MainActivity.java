@@ -3,74 +3,47 @@ package com.example.calendar;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Switch darkMode;
     private ConstraintLayout mainLayout;
-    private ImageView image;
-    private Button goToCalendar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        darkMode = (Switch) findViewById(R.id.darkSwitch);
+        TextView signupText = (TextView) findViewById(R.id.signupButton);
+        String text = "New to Eezy? Click Here!";
+        SpannableString ss = new SpannableString(text);
+        signupText.setTextColor(Color.parseColor("#F7A9A8"));
+        ClickableSpan numberOne = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View view) {
+                Intent intent = new Intent(MainActivity.this, signup_page.class);
+                startActivity(intent);
+            }
+        };
+        ss.setSpan(numberOne, 13,24, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+        signupText.setText(ss);
+        signupText.setMovementMethod(LinkMovementMethod.getInstance());
         mainLayout = (ConstraintLayout) findViewById(R.id.layout);
-        image = (ImageView) findViewById(R.id.imageView);
-
-        goToCalendar = (Button) findViewById(R.id.buttonCalendar);
-
-        darkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if (isChecked) {
-                    mainLayout.setBackgroundColor(Color.parseColor("#141D26"));
-                    image.setColorFilter(Color.parseColor("#FFFFFF"));
-                    darkMode.setTextColor(Color.parseColor("#FFFFFF"));
-                    goToCalendar.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Intent in = new Intent(MainActivity.this, CalendarDark.class);
-                            startActivity(in);
-                        }
-                    });
-                } else {
-                    mainLayout.setBackgroundColor(Color.parseColor("#FFFFFF"));
-                    image.setColorFilter(Color.parseColor("#000000"));
-                    darkMode.setTextColor(Color.parseColor("#000000"));
-                    goToCalendar.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Log.d("MainActivity", "onsetDate: date: ");
-                            Intent in = new Intent(MainActivity.this, CalendarLight.class);
-                            startActivity(in);
-                        }
-                    });
-                }
-            }
-        });
-        mainLayout.setBackgroundColor(Color.parseColor("#FFFFFF"));
-        image.setColorFilter(Color.parseColor("#000000"));
-        darkMode.setTextColor(Color.parseColor("#000000"));
-        goToCalendar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d("MainActivity", "onsetDate: date: ");
-                Intent in = new Intent(MainActivity.this, CalendarLight.class);
-                startActivity(in);
-            }
-        });
     }
-
 }

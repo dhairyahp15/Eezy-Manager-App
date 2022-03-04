@@ -1,4 +1,4 @@
-# Eezy - Personal Manager
+9p[\1  `    q0-oi0-=# Eezy - Personal Manager
 
 _Eezy manage, Eezy life_
 
