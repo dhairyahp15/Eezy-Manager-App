@@ -9,19 +9,22 @@ public class UserList {
 		size = 0;
 	}
 	
-	public void addUser(User user) {
-		if(head == null) {
-			head = new Node(user);
-		}
-		else {
-			Node curr = head;
-			
-			while(curr.getNext()!= null) {
-				curr = curr.getNext();
+	public boolean addUser(User user) {
+		if(this.checkEmail(user.getEmail()) && !this.checkUsername(user.getUserName())) {
+			if (head == null) {
+				head = new Node(user);
+			} else {
+				Node curr = head;
+
+				while (curr.getNext() != null) {
+					curr = curr.getNext();
+				}
+				curr.setNext(new Node(user));
 			}
-			curr.setNext(new Node(user));
+			size++;
+			return true;
 		}
-		size++;
+		return false;
 	}
 
 	//If false, same email exists
