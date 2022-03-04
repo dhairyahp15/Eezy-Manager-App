@@ -1,4 +1,4 @@
-Eezy - Personal Manager
+##Eezy - Personal Manager
 
 _Eezy manage, Eezy life_
 
