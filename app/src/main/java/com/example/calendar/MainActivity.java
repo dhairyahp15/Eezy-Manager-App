@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -22,14 +23,30 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
+    protected static UserList list;
+    EditText user, pass;
+    Button loginButton;
     private ConstraintLayout mainLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        redirectSignup();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+    }
+
+    public void redirectSignup() {
         TextView signupText = (TextView) findViewById(R.id.signupButton);
         String text = "New to Eezy? Click Here!";
         SpannableString ss = new SpannableString(text);
@@ -38,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(@NonNull View view) {
                 Intent intent = new Intent(MainActivity.this, signup_page.class);
-                startActivity(intent);
+                MainActivity.this.startActivity(intent);
             }
         };
         ss.setSpan(numberOne, 13,24, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
@@ -46,4 +63,5 @@ public class MainActivity extends AppCompatActivity {
         signupText.setMovementMethod(LinkMovementMethod.getInstance());
         mainLayout = (ConstraintLayout) findViewById(R.id.layout);
     }
+
 }

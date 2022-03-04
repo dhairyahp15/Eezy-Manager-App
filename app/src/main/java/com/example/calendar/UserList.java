@@ -2,9 +2,11 @@ package com.example.calendar;
 
 public class UserList {
 	private Node head;
+	private int size;
 	
 	public UserList(){
-		
+		head = null;
+		size = 0;
 	}
 	
 	public void addUser(User user) {
@@ -19,7 +21,9 @@ public class UserList {
 			}
 			curr.setNext(new Node(user));
 		}
+		size++;
 	}
+
 	//If false, same email exists
 	public boolean checkEmail(String email) {
 		boolean check = true;
@@ -39,18 +43,26 @@ public class UserList {
 	
 	//If false, same username exists
 	public boolean checkUsername(String username) {
-		boolean check = true;
+		boolean check = false;
 		
 		Node curr = head;
 		
-		while(curr!=null && check) {
+		while(curr!=null && !check) {
 			if(curr.getData().getUserName().equals(username)) {
-				check = false;
+				check = true;
 			}
 			else {
 				curr = curr.getNext();
 			}
 		}
 		return check;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public String toString() {
+		return "The list " + size;
 	}
 }
