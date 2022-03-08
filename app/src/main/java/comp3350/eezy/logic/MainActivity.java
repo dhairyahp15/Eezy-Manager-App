@@ -48,27 +48,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         redirectSignup();
-        darkMode = findViewById(R.id.darkSwitch);
-        mainLayout = findViewById(R.id.layout);
-        Button goToCalendar = findViewById(R.id.buttonCalendar);
-
-        darkMode.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-            if (isChecked) {
-                dark = true;
-                mainLayout.setBackgroundColor(Color.parseColor("#141D26"));
-                darkMode.setTextColor(Color.parseColor("#FFFFFF"));
-            } else {
-                dark = false;
-                mainLayout.setBackgroundColor(Color.parseColor("#FFFFFF"));
-                darkMode.setTextColor(Color.parseColor("#000000"));
-            }
-        });
-        mainLayout.setBackgroundColor(Color.parseColor("#FFFFFF"));
-        darkMode.setTextColor(Color.parseColor("#000000"));
-        goToCalendar.setOnClickListener(view -> {
-            Intent in = new Intent(MainActivity.this, Calendar.class);
-            startActivity(in);
-        });
+//        darkMode = findViewById(R.id.darkSwitch);
+//        mainLayout = findViewById(R.id.layout);
+//        Button goToCalendar = findViewById(R.id.buttonCalendar);
+//
+//        darkMode.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+//            if (isChecked) {
+//                dark = true;
+//                mainLayout.setBackgroundColor(Color.parseColor("#141D26"));
+//                darkMode.setTextColor(Color.parseColor("#FFFFFF"));
+//            } else {
+//                dark = false;
+//                mainLayout.setBackgroundColor(Color.parseColor("#FFFFFF"));
+//                darkMode.setTextColor(Color.parseColor("#000000"));
+//            }
+//        });
+//        mainLayout.setBackgroundColor(Color.parseColor("#FFFFFF"));
+//        darkMode.setTextColor(Color.parseColor("#000000"));
+//        goToCalendar.setOnClickListener(view -> {
+//            Intent in = new Intent(MainActivity.this, Calendar.class);
+//            startActivity(in);
+//        });
     }
 
     @Override

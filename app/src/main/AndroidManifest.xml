@@ -16,6 +16,9 @@
             android:name=".objects.SignupPage"
             android:exported="false" />
         <activity
+            android:name=".objects.Calendar"
+            android:exported="false"/>
+        <activity
             android:name=".logic.MainActivity"
             android:exported="true">
             <intent-filter>

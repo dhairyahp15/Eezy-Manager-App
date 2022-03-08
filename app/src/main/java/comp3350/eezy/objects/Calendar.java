@@ -9,10 +9,6 @@ import comp3350.eezy.logic.MainActivity;
 public class Calendar extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        boolean darkMode = MainActivity.dark;
-        if(darkMode)
-            setContentView(R.layout.activity_calendar_dark);
-        else
-            setContentView(R.layout.activity_calendar);
+        setContentView(R.layout.activity_calendar_dark);
     }
 }
