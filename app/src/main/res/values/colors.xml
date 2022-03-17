@@ -2,7 +2,7 @@
 <resources>
     <color name="pink1">#EF798A</color>
     <color name="pink2">#F7A9A8</color>
-        <color name="purple1">#613F75</color>
+    <color name="purple1">#613F75</color>
     <color name="purple2">#E5C3D1</color>
     <color name="purple3">#6C6063</color>
     <color name="night">#150E1A</color>
