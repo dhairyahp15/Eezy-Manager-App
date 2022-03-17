@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="teal1">#00AB96</color>
-    <color name="teal2">#0095AB</color>
-    <color name="teal3">#006AAB</color>
-    <color name="night">#141d26</color>
+    <color name="pink1">#EF798A</color>
+    <color name="pink2">#F7A9A8</color>
+        <color name="purple1">#613F75</color>
+    <color name="purple2">#E5C3D1</color>
+    <color name="purple3">#6C6063</color>
+    <color name="night">#150E1A</color>
     <color name="black">#FF000000</color>
     <color name="grey">#C0C0C0</color>
     <color name="white">#FFFFFFFF</color>

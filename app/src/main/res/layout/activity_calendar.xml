@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="@string/calTitle"
         android:textAlignment="center"
-        android:textColor="@color/teal3"
+        android:textColor="@color/purple1"
         android:textSize="42sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
