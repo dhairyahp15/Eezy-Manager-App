@@ -1,18 +1,13 @@
-package comp3350.eezy.objects;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package comp3350.eezy.presentation;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.style.ClickableSpan;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import comp3350.eezy.R;
-import comp3350.eezy.logic.MainActivity;
+import comp3350.eezy.objects.User;
 
 public class SignupPage extends MainActivity {
 
