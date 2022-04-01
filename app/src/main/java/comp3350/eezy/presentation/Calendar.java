@@ -39,6 +39,9 @@ public class Calendar extends AppCompatActivity {
         }
         eventName = findViewById(R.id.eventName);
 
+        selectedDate = String.valueOf(calendarView.getDate());
+        Toast.makeText(Calendar.this, "Please select a date.", Toast.LENGTH_LONG).show();
+
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
