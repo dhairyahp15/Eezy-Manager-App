@@ -25,6 +25,7 @@ public class HomePage extends AppCompatActivity{
         darkMode = findViewById(R.id.darkSwitch);
         mainLayout = findViewById(R.id.layout);
         Button goToCalendar = findViewById(R.id.buttonCalendar);
+        Button goToPassword = findViewById(R.id.buttonPassword);
 
         darkMode.setOnCheckedChangeListener((compoundButton, isChecked) -> {
             if (isChecked) {
@@ -41,6 +42,11 @@ public class HomePage extends AppCompatActivity{
         darkMode.setTextColor(Color.parseColor("#000000"));
         goToCalendar.setOnClickListener(view -> {
             Intent in = new Intent(HomePage.this, Calendar.class);
+            startActivity(in);
+        });
+
+        goToPassword.setOnClickListener(view -> {
+            Intent in = new Intent(HomePage.this, PasswordManager.class);
             startActivity(in);
         });
     }

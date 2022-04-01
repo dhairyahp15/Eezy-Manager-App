@@ -17,7 +17,7 @@
     </style>
 
     <style name="CalNight" parent="Theme.AppCompat">
-        <item name="colorAccent">@color/purple1</item>
+        <item name="colorAccent">@color/purple2</item>
         <item name="colorPrimary">@color/white</item>
     </style>
 

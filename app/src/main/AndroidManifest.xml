@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Calendar">
-
         <activity
             android:name=".presentation.SignupPage"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.PasswordManager"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.NewPassword"
             android:exported="false" />
         <activity
             android:name=".presentation.Calendar"

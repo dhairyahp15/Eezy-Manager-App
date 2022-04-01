@@ -11,4 +11,9 @@
     <string name="eezy">Eezy</string>
     <string name="go_to_calendar">Go to Calendar</string>
     <string name="dark_mode">Dark Mode</string>
+    <string name="title_password">Password Manager</string>
+    <string name="title_password_name">Name</string>
+    <string name="title_password_user">Username</string>
+    <string name="title_password_password">Password</string>
+    <string name="title_save">Save</string>
 </resources>

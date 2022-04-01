@@ -11,11 +11,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import comp3350.eezy.R;
 import comp3350.eezy.objects.User;
 import comp3350.eezy.persistence.CalendarDB;
 
-public class SignupPage extends LoginPage {
+public class SignupPage extends AppCompatActivity {
     private CalendarDB db;
     EditText name, email, username, password;
     Button signupButton;
