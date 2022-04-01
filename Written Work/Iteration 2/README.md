@@ -16,6 +16,7 @@ With this iteration, we were able to better communicate and tackle larger proble
 - [Commit of completed database](6be7b5c4b22c55faaa872da22976323d12ecc901)
 - [Completing a large feature in the Password Manager](b2266f80c0ce76aaea343a0be89cfd5337a7f5d0)
 - [Dealing with merge conflicts](734ae3d7c7de3efbc9de258b13d9a3abe295ce52)
+- [Completion of a High Priority feature To Do List](10f732304b7de021342a4d810afb6a218ffaf5b7)
 
 ## Design Patterns
 
