@@ -19,7 +19,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Calendar extends AppCompatActivity {
-
     private CalendarDB db;
     private EditText eventName;
     private CalendarView calendarView;
@@ -38,7 +37,6 @@ public class Calendar extends AppCompatActivity {
             calendarView = findViewById(R.id.calendar_view);
         }
         eventName = findViewById(R.id.eventName);
-
         selectedDate = String.valueOf(calendarView.getDate());
         Toast.makeText(Calendar.this, "Please select a date.", Toast.LENGTH_LONG).show();
 

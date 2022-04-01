@@ -1,6 +1,5 @@
 package comp3350.eezy.presentation;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -34,7 +33,6 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         try {
             db = new CalendarDB(this, "logindatabase", null, 1);
             sqliteDatabase = db.getWritableDatabase();
@@ -67,11 +65,6 @@ public class LoginPage extends AppCompatActivity {
         user = (EditText) findViewById(R.id.username);
         pass = (EditText) findViewById(R.id.password);
         loginButton = (Button) findViewById(R.id.button);
-
-
-
-
-
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -83,22 +76,18 @@ public class LoginPage extends AppCompatActivity {
                 else{
                     loginFailure(userString, passString);
                 }
-
             }
         });
     }
 
     public boolean checkDuplicate(String user, String pass){
         boolean test = false;
-
         Cursor userPassCheck = sqliteDatabase.rawQuery("SELECT PASSWORD FROM SignupInfo WHERE USERNAME = ? AND PASSWORD =?", new String[]{user, pass});
-
         if(!user.isEmpty() && !pass.isEmpty()){
             if(userPassCheck.moveToFirst()){
                 test = true;
             }
         }
-
         return test;
     }
 
@@ -115,6 +104,5 @@ public class LoginPage extends AppCompatActivity {
         else{
             Toast.makeText(LoginPage.this, "Username and/or Password cannot be empty!", Toast.LENGTH_LONG).show();
         }
-
     }
 }

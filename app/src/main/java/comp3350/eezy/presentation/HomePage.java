@@ -21,7 +21,6 @@ public class HomePage extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         darkMode = findViewById(R.id.darkSwitch);
         mainLayout = findViewById(R.id.layout);
         Button goToCalendar = findViewById(R.id.buttonCalendar);
@@ -44,12 +43,9 @@ public class HomePage extends AppCompatActivity{
             Intent in = new Intent(HomePage.this, Calendar.class);
             startActivity(in);
         });
-
         goToPassword.setOnClickListener(view -> {
             Intent in = new Intent(HomePage.this, PasswordManager.class);
             startActivity(in);
         });
     }
-
-
 }

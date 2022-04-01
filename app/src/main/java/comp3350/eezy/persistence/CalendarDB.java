@@ -3,8 +3,6 @@ package comp3350.eezy.persistence;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.Context;
-
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class CalendarDB extends SQLiteOpenHelper {
@@ -14,12 +12,8 @@ public class CalendarDB extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db){
-
-    }
+    public void onCreate(SQLiteDatabase db){}
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-
-    }
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){}
 }

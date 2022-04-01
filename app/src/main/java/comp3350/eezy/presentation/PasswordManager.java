@@ -5,9 +5,7 @@ import static comp3350.eezy.presentation.HomePage.dark;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import comp3350.eezy.R;
 
 public class PasswordManager extends AppCompatActivity {
@@ -21,7 +19,6 @@ public class PasswordManager extends AppCompatActivity {
         } else {
             setContentView(R.layout.activity_password_manager);
         }
-
         Button goToAdd = findViewById(R.id.buttonAdd);
 
         goToAdd.setOnClickListener(view -> {

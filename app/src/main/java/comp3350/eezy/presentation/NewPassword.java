@@ -1,7 +1,6 @@
 package comp3350.eezy.presentation;
 
 import static comp3350.eezy.presentation.HomePage.dark;
-
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
