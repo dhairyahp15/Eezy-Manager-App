@@ -19,7 +19,7 @@ import comp3350.eezy.persistence.CalendarDB;
 
 public class SignupPage extends AppCompatActivity {
     private CalendarDB db;
-    EditText name, email, username, password;
+    EditText name, email, username, password, confirmPassword;
     Button signupButton;
     private SQLiteDatabase sqliteDatabase;
 
@@ -32,6 +32,7 @@ public class SignupPage extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         name = findViewById(R.id.name);
+        confirmPassword = findViewById(R.id.confirm_password);
 
         try {
             db = new CalendarDB(this, "logindatabase", null, 1);
@@ -56,7 +57,7 @@ public class SignupPage extends AppCompatActivity {
             Toast.makeText(SignupPage.this, "Something went wrong! Try Again..", Toast.LENGTH_LONG).show();
         }
         else if(!username.getText().toString().isEmpty() && !name.getText().toString().isEmpty()
-                && !email.getText().toString().isEmpty() && !password.getText().toString().isEmpty()){
+                && !email.getText().toString().isEmpty() && !password.getText().toString().isEmpty() && !confirmPassword.getText().toString().isEmpty()){
             contentValues.put("USERNAME", username.getText().toString());
             contentValues.put("NAME", name.getText().toString());
             contentValues.put("EMAIL", email.getText().toString());
