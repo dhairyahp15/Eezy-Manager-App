@@ -4,13 +4,13 @@ public class User {
     private String email;
     private String name;
     private String password;
-    private String userName;
+    private String username;
 
     public User(String email, String name, String password, String userName) {
         this.email = email;
         this.name = name;
         this.password = password;
-        this.userName = userName;
+        this.username = userName;
     }
 
     public String getEmail(){
@@ -24,6 +24,6 @@ public class User {
         return this.password;
     }
     public String getUserName() {
-        return this.userName;
+        return this.username;
     }
 }

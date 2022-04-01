@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comp3350.eezy.presentation.HomePage"
+    android:background="@color/night"
+    tools:context="comp3350.eezy.presentation.MainActivity"
     android:id="@+id/layout">
 
     <TextView
@@ -25,11 +26,11 @@
     <Button
         android:id="@+id/buttonCalendar"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:backgroundTint="@color/purple1"
-        android:text="Calendar"
+        android:text="Go to Calendar"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,28 +39,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.169" />
 
-    <Button
-        android:id="@+id/buttonPassword"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:backgroundTint="@color/purple1"
-        android:text="Password Manager"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.245" />
-
     <Switch
         android:id="@+id/darkSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dark Mode"
-        android:textColor="@color/purple1"
+        android:textColor="@color/purple3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.054"

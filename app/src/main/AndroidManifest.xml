@@ -10,16 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calendar">
         <activity
-            android:name=".objects.LoginPage"
-            android:exported="false"/>
-        <activity
-            android:name=".objects.SignupPage"
+            android:name=".presentation.SignupPage"
             android:exported="false" />
         <activity
-            android:name=".objects.Calendar"
+            android:name=".presentation.PasswordManager"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.Calendar"
             android:exported="false"/>
         <activity
-            android:name=".logic.MainActivity"
+            android:name=".presentation.HomePage"
+            android:exported="false"/>
+        <activity
+            android:name=".presentation.LoginPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

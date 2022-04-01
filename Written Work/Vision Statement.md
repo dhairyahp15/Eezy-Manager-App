@@ -1,5 +1,5 @@
-### Our Vision Statement
----
+# Our Vision Statement
+
 Eezy is a personal organiser that helps the user stay organised and in control throughout the day. It is intended to make the user's life simpler, as the name implies. Using a calendar to track single, essential events such as medical visits and exams as well as long-term, recurring events such as school and work schedules, anniversaries, and so on. A basic to-do list to write down small activities, lengthier lists such as groceries and reminders to keep the users calendar clutter-free and allow more focus on each day as it arrives! Using Eezy to manage time is simple and puts the user in charge.
 
 While time management is extremely important to Eezy, there are many other aspects of everyday life that everyone needs to stay on top of. A strong and secure password manager is available for users to better organize and secure their many online and personal accounts, providing strong and safe encryption to every item added to the manager.
