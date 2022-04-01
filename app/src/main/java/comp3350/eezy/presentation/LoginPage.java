@@ -72,14 +72,20 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View view){
                 Cursor userPassCheck = sqliteDatabase.rawQuery("SELECT PASSWORD FROM SignupInfo WHERE USERNAME = ? AND PASSWORD =?", new String[]{user.getText().toString(), pass.getText().toString()});
 
-               if(userPassCheck.moveToFirst()){
-                    Toast.makeText(LoginPage.this, "Login Successful!", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(LoginPage.this, HomePage.class);
-                    startActivity(intent);
+                if(!user.getText().toString().isEmpty() && !pass.getText().toString().isEmpty()){
+                    if(userPassCheck.moveToFirst()){
+                        Toast.makeText(LoginPage.this, "Login Successful!", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(LoginPage.this, HomePage.class);
+                        startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(LoginPage.this, "Username and/or Password is incorrect!", Toast.LENGTH_LONG).show();
+                    }
                 }
                 else{
-                    Toast.makeText(LoginPage.this, "Login Unsuccessful!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginPage.this, "Username and/or Password cannot be empty!", Toast.LENGTH_LONG).show();
                 }
+
             }
         });
     }

@@ -32,14 +32,6 @@ public class SignupPage extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         name = findViewById(R.id.name);
-        /*signupButton = (Button) findViewById(R.id.button);
-        signupButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignupPage.this, LoginPage.class);
-                startActivity(intent);
-            }
-        });*/
 
         try {
             db = new CalendarDB(this, "logindatabase", null, 1);
@@ -63,7 +55,8 @@ public class SignupPage extends AppCompatActivity {
         else if(usernameCheck.moveToFirst()){
             Toast.makeText(SignupPage.this, "Something went wrong! Try Again..", Toast.LENGTH_LONG).show();
         }
-        else{
+        else if(!username.getText().toString().isEmpty() && !name.getText().toString().isEmpty()
+                && !email.getText().toString().isEmpty() && !password.getText().toString().isEmpty()){
             contentValues.put("USERNAME", username.getText().toString());
             contentValues.put("NAME", name.getText().toString());
             contentValues.put("EMAIL", email.getText().toString());
@@ -74,6 +67,9 @@ public class SignupPage extends AppCompatActivity {
             Intent intent = new Intent(SignupPage.this, LoginPage.class);
             this.startActivity(intent);
        }
+        else{
+            Toast.makeText(SignupPage.this, "Fields cannot be empty!", Toast.LENGTH_LONG).show();
+        }
 
     }
 
