@@ -67,26 +67,54 @@ public class LoginPage extends AppCompatActivity {
         user = (EditText) findViewById(R.id.username);
         pass = (EditText) findViewById(R.id.password);
         loginButton = (Button) findViewById(R.id.button);
+
+
+
+
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                Cursor userPassCheck = sqliteDatabase.rawQuery("SELECT PASSWORD FROM SignupInfo WHERE USERNAME = ? AND PASSWORD =?", new String[]{user.getText().toString(), pass.getText().toString()});
-
-                if(!user.getText().toString().isEmpty() && !pass.getText().toString().isEmpty()){
-                    if(userPassCheck.moveToFirst()){
-                        Toast.makeText(LoginPage.this, "Login Successful!", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(LoginPage.this, HomePage.class);
-                        startActivity(intent);
-                    }
-                    else{
-                        Toast.makeText(LoginPage.this, "Username and/or Password is incorrect!", Toast.LENGTH_LONG).show();
-                    }
+                String userString = user.getText().toString();
+                String passString = pass.getText().toString();
+                if(checkDuplicate(userString, passString)){
+                    loginSuccessful();
                 }
                 else{
-                    Toast.makeText(LoginPage.this, "Username and/or Password cannot be empty!", Toast.LENGTH_LONG).show();
+                    loginFailure(userString, passString);
                 }
 
             }
         });
+    }
+
+    public boolean checkDuplicate(String user, String pass){
+        boolean test = false;
+
+        Cursor userPassCheck = sqliteDatabase.rawQuery("SELECT PASSWORD FROM SignupInfo WHERE USERNAME = ? AND PASSWORD =?", new String[]{user, pass});
+
+        if(!user.isEmpty() && !pass.isEmpty()){
+            if(userPassCheck.moveToFirst()){
+                test = true;
+            }
+        }
+
+        return test;
+    }
+
+    public void loginSuccessful(){
+        Toast.makeText(LoginPage.this, "Login Successful!", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(LoginPage.this, HomePage.class);
+        startActivity(intent);
+    }
+
+    public void loginFailure(String user, String pass){
+        if(!user.isEmpty() && !pass.isEmpty()) {
+            Toast.makeText(LoginPage.this, "Username and/or Password is incorrect!", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(LoginPage.this, "Username and/or Password cannot be empty!", Toast.LENGTH_LONG).show();
+        }
+
     }
 }

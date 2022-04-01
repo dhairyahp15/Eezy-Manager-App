@@ -68,12 +68,8 @@ public class SignupPage extends AppCompatActivity {
             Intent intent = new Intent(SignupPage.this, LoginPage.class);
             this.startActivity(intent);
        }
-        else{
+        else {
             Toast.makeText(SignupPage.this, "Fields cannot be empty!", Toast.LENGTH_LONG).show();
         }
-
     }
-
-
-
 }
