@@ -9,14 +9,16 @@ Two instances where our group paid off technical debt created in iteration 1:
 - When our group was working through this iteration we had not implemented any sort of database (dummy or real) that would work properly with inputs from our application. We had to implement a dummy database that was not associated with the rest of our program as we did not have time. This debt was *prudent and deliberate* as we had run out of time but planned to deal with and resolve the issues this would cause during this iteration.
   - [Commit to implementing a database with our GUI layer](db2b85c86a78b9c03419a7d841ed9c1247c335cc)
 
+## SOLID Violation in Group 5
+Looking through Group 5's project, we could not find any SOLID violations. Their implementations and design is very well thought out and clear.
+
 ## Retrospective
 
-With this iteration, we were able to better communicate and tackle larger problems together as a group. We still struggled with time estimates with the GitLab issues, but with how many large parts of the application were completed during this iteration, we have a much better grasp of how long features and user stories will take to implement. We were also better prepared for any merge issues we encountered in the last stage of the iteration.
+With this iteration, we were able to better communicate and tackle larger problems together as a group. We still struggled with time estimates with the GitLab issues, but with how many large parts of the application were completed during this iteration, we have a much better grasp of how long features and user stories will take to implement. We were also better prepared for any merge issues we encountered in the last stage of the iteration. During this iteration we were unable to implement any tests as our application mostly relies on GUI and user inputs that cannot be tested. We instead did manual tests to make sure all components of our application are working properly. We have taken on some technical debt with our database (*reckless and deliberate*) that we will have to repay in the next iteration.
 
 - [Commit of completed database](6be7b5c4b22c55faaa872da22976323d12ecc901)
 - [Completing a large feature in the Password Manager](b2266f80c0ce76aaea343a0be89cfd5337a7f5d0)
 - [Dealing with merge conflicts](734ae3d7c7de3efbc9de258b13d9a3abe295ce52)
-- [Completion of a High Priority feature To Do List](10f732304b7de021342a4d810afb6a218ffaf5b7)
 
 ## Design Patterns
 
