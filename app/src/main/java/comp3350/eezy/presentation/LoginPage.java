@@ -1,6 +1,9 @@
 package comp3350.eezy.presentation;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -11,25 +14,34 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import comp3350.eezy.R;
+import comp3350.eezy.persistence.CalendarDB;
 
 public class LoginPage extends MainActivity {
-
+    private CalendarDB db;
     Button loginButton;
     EditText user, pass;
     private ConstraintLayout mainLayout;
+    private SQLiteDatabase sqliteDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        redirectSignup();
+        try {
+            db = new CalendarDB(this, "logindatabase", null, 1);
+            sqliteDatabase = db.getWritableDatabase();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         login();
+        redirectSignup();
     }
 
     public void redirectSignup() {
@@ -56,12 +68,18 @@ public class LoginPage extends MainActivity {
         loginButton = (Button) findViewById(R.id.button);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginPage.this, HomePage.class);
-                startActivity(intent);
+            public void onClick(View view){
+                Cursor userPassCheck = sqliteDatabase.rawQuery("SELECT PASSWORD FROM SignupInfo WHERE USERNAME = ? AND PASSWORD =?", new String[]{user.getText().toString(), pass.getText().toString()});
+
+               if(userPassCheck.moveToFirst()){
+                    Toast.makeText(LoginPage.this, "Login Successful!", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(LoginPage.this, HomePage.class);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(LoginPage.this, "Login Unsuccessful!", Toast.LENGTH_LONG).show();
+                }
             }
         });
-
     }
-
 }

@@ -80,7 +80,6 @@ public class Calendar extends AppCompatActivity {
         else{
             sqliteDatabase.insert("CalendarEvent", null, contentValues);
         }
-
     }
 
     public void deleteEvent(View view){
@@ -89,7 +88,4 @@ public class Calendar extends AppCompatActivity {
             sqliteDatabase.delete("CalendarEvent", "Date = ?", new String[]{selectedDate});
         }
     }
-
-
-
 }
