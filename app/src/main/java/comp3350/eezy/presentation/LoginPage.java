@@ -17,12 +17,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import comp3350.eezy.R;
 import comp3350.eezy.persistence.CalendarDB;
 
-public class LoginPage extends MainActivity {
+public class LoginPage extends AppCompatActivity {
     private CalendarDB db;
     Button loginButton;
     EditText user, pass;

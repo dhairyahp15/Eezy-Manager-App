@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Calendar">
-        <activity
-            android:name=".presentation.LoginPage"
-            android:exported="false"/>
+
         <activity
             android:name=".presentation.SignupPage"
             android:exported="false" />
@@ -22,7 +20,7 @@
             android:name=".presentation.HomePage"
             android:exported="false"/>
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.LoginPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

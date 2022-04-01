@@ -15,7 +15,7 @@ import comp3350.eezy.R;
 import comp3350.eezy.objects.User;
 import comp3350.eezy.persistence.CalendarDB;
 
-public class SignupPage extends MainActivity {
+public class SignupPage extends LoginPage {
     private CalendarDB db;
     EditText name, email, username, password;
     Button signupButton;
