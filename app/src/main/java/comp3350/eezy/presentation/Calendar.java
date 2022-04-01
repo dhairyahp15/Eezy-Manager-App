@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Calendar extends AppCompatActivity {
 
@@ -76,9 +77,11 @@ public class Calendar extends AppCompatActivity {
 
         if(cursor.getCount() > 0){
             sqliteDatabase.update("CalendarEvent", contentValues, "Date = ?",new String[]{selectedDate});
+            Toast.makeText(Calendar.this, "Updated Successfully!", Toast.LENGTH_LONG).show();
         }
         else{
             sqliteDatabase.insert("CalendarEvent", null, contentValues);
+            Toast.makeText(Calendar.this, "Saved Successfully!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -86,6 +89,7 @@ public class Calendar extends AppCompatActivity {
         Cursor cursor = sqliteDatabase.rawQuery("Select Event from CalendarEvent where Date = ?", new String[]{selectedDate});
         if(cursor.getCount() > 0){
             sqliteDatabase.delete("CalendarEvent", "Date = ?", new String[]{selectedDate});
+            Toast.makeText(Calendar.this, "Deleted!", Toast.LENGTH_LONG).show();
         }
     }
 }
