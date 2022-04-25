@@ -11,7 +11,7 @@ public class LoginPageTest {
     public void testLogin()
     {
         LoginPage lp = new LoginPage();
-        assertTrue(lp.checkDuplicate("remmy", "remmy"));
+        assert(lp.checkDuplicate("remmy", "remmy") != null);
     }
 
 }

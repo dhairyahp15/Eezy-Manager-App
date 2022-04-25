@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/night"
-    tools:context="comp3350.eezy.presentation.MainActivity"
+    tools:context="comp3350.eezy.presentation.HomePage"
     android:id="@+id/layout">
 
     <TextView
@@ -32,6 +32,7 @@
         android:backgroundTint="@color/purple1"
         android:text="Go to Calendar"
         android:textSize="20sp"
+        android:onClick="onClickCalendar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

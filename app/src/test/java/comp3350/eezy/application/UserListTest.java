@@ -1,11 +1,11 @@
-package comp3350.eezy.logic;
+package comp3350.eezy.application;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import comp3350.eezy.objects.User;
-import comp3350.eezy.objects.UserList;
+import comp3350.eezy.objects.Stubs.User;
+import comp3350.eezy.objects.Stubs.UserList;
 
 public class UserListTest {
     UserList list;

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calendar">
         <activity
+            android:name=".presentation.ViewPasswords"
+            android:exported="false" />
+        <activity
             android:name=".presentation.SignupPage"
             android:exported="false" />
         <activity
@@ -20,10 +23,10 @@
             android:exported="false" />
         <activity
             android:name=".presentation.Calendar"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".presentation.HomePage"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".presentation.LoginPage"
             android:exported="true">

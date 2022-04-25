@@ -1,4 +1,4 @@
-package comp3350.eezy.objects;
+package comp3350.eezy.objects.Stubs;
 
 public class Node {
     private User user;
